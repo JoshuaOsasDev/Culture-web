@@ -1,0 +1,49 @@
+.btnHero {
+  margin: 2rem 0;
+  text-transform: capitalize;
+  cursor: pointer;
+  outline: 1;
+  font-family: "lora", serif;
+  padding: 0.6em 1em;
+  background-color: transparent;
+  border: 1px solid #ffff;
+  color: #ffff;
+  font-size: 1.7em;
+  font-weight: 600;
+}
+
+.btnDiscover {
+  padding: 0.5em;
+  background-color: #fff;
+  margin: 10px 15px 2rem;
+
+  text-transform: capitalize;
+  font-size: 1.1em;
+  border: none;
+  cursor: pointer;
+  outline: 1;
+  font-family: "lora", serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btnDiscover:hover {
+  background-color: rgb(95, 140, 158);
+  color: #fff;
+}
+
+.btnHistory {
+  margin-top: 4rem;
+  border: 3px solid #333333;
+  color: #333333;
+  font-size: 1rem;
+  padding: 15px 25px;
+  background-color: transparent;
+  /* font-family: "sora", "serif"; */
+  font-weight: 600;
+  outline: 5;
+  transition: 0.4s ease;
+}
+
+.btnHistory:hover {
+  margin-left: 10px;
+}

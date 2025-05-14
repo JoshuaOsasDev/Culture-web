@@ -1,0 +1,28 @@
+.carousel {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+:global(.swiper-button-prev::after),
+:global(.swiper-button-next::after) {
+  font-size: 25px !important;
+  color: #fff;
+}
+
+:global(.swiper-button-prev) {
+  top: 82% !important;
+  left: 82% !important;
+}
+
+:global(.swiper-button-next) {
+  right: 10px !important;
+  top: 82% !important;
+}
+
+:global(.swiper-pagination-bullet-active) {
+  background-color: #fff !important;
+}

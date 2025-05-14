@@ -1,0 +1,50 @@
+.section {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 70%;
+  padding: 4rem 0;
+  font-family: "Playfair Display", serif;
+}
+
+.section h2 {
+  text-align: center;
+}
+
+.section img {
+  width: 50%;
+  height: 630px;
+  margin-right: 1em;
+}
+
+.historyDisplay {
+  display: flex;
+  gap: 15px;
+  margin: 3rem 0;
+}
+
+.historyDisplay div {
+  padding-top: 20px;
+  line-height: 1;
+}
+.historyDisplay h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding-bottom: 2rem;
+  line-height: 1.2;
+  font-family: "Sora", serif;
+  color: #333333;
+}
+
+.historyDisplay p {
+  padding: 10px 0;
+  line-height: 1.5;
+  font-family: "lora", "sarif";
+  color: #454444;
+}
+
+.historyDisplay .heading {
+  padding-bottom: 0;
+  text-transform: capitalize;
+  font-weight: bold;
+}

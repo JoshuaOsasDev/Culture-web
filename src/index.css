@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #011731;
+}
+
+.text {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: lighter;
+  opacity: 0.5;
+  margin-top: 2rem;
+}
