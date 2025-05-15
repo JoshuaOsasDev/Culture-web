@@ -35,14 +35,16 @@ function Discover() {
 
         <DIscoverImgCom>
           <h3>the magestic floor valley</h3>
-          <p>
+          <p className={styles.last}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
             ipsam quos, necessitatibus neque laboriosam error.
           </p>
-          <Button type="btnDiscover">discover lora valley</Button>
+          <Button type="btnDiscover" className={styles.buttonPosition}>
+            discover lora valley
+          </Button>
         </DIscoverImgCom>
 
-        <DIscoverImgCom>
+        {/* <DIscoverImgCom>
           <h3>Sunrise Peaks of Itsekiri</h3>
           <p>
             Wake up above the clouds in the Sunrise Peaks, where every morning
@@ -50,7 +52,7 @@ function Discover() {
             highland paradise is a must-see for the bold at heart.
           </p>
           <Button type="btnDiscover">Feel the beauty</Button>
-        </DIscoverImgCom>
+        </DIscoverImgCom> */}
       </div>
     </section>
   );

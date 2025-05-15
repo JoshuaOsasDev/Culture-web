@@ -24,6 +24,8 @@
   outline: 1;
   font-family: "lora", serif;
   transition: background-color 0.3s, color 0.3s;
+  position: absolute;
+  bottom: -20px !important;
 }
 
 .btnDiscover:hover {
@@ -46,4 +48,8 @@
 
 .btnHistory:hover {
   margin-left: 10px;
+}
+
+.btnPosition {
+  position: absolute;
 }

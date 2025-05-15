@@ -20,6 +20,14 @@
 
 .whole {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.last {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 117px;
 }
