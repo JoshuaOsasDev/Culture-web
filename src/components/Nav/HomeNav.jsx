@@ -9,11 +9,21 @@ function HomeNav() {
 
       <ul>
         <li>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/event">Event</NavLink>
-          <NavLink to="/history">History</NavLink>
-          <NavLink to="/news">News</NavLink>
-          <NavLink to="/contact">contact</NavLink>
+          <NavLink to="/about">
+            About <div></div>
+          </NavLink>
+          <NavLink to="/event">
+            Event <div></div>
+          </NavLink>
+          <NavLink to="/history">
+            History <div></div>
+          </NavLink>
+          <NavLink to="/news">
+            News <div></div>
+          </NavLink>
+          <NavLink to="/contact">
+            contact <div></div>
+          </NavLink>
         </li>
       </ul>
     </nav>

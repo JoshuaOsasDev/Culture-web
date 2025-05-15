@@ -1,0 +1,13 @@
+.newsLayout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 0 120px;
+
+  gap: 21px;
+  margin: 4rem 0 5rem;
+}

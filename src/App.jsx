@@ -3,7 +3,7 @@ import Homepage from "./pages/Homepage";
 import About from "./pages/About";
 import Event from "./pages/Event";
 import History from "./pages/History";
-import News from "./pages/News";
+import News from "./pages/NewsPage/News";
 import Contact from "./pages/Contact";
 import PageNotFound from "./pages/PageNotFound";
 import Photography from "./pages/Photography";
