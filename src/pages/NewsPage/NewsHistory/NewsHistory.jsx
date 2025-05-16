@@ -2,7 +2,7 @@ import styles from "./NewsHistory.module.css";
 function NewsHistory() {
   return (
     <div className={styles.history}>
-      <img className={styles.img} src="public/olu-warr-ceremony-2.jpg" />
+      <img className={styles.img} src="/olu-warr-ceremony-2.jpg" />
       <div>
         <h3>Who are the Itsejiris</h3>
         <div className={styles.body}>

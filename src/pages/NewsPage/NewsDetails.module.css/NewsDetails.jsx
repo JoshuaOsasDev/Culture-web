@@ -1,9 +1,9 @@
 import styles from "./NewsDetails.module.css";
 import { useContent } from "../../../../context/UseContent";
-
+import Message from "../../../components/Message";
 function NewsDetails() {
-  const { news } = useContent();
-
+  const { news, error } = useContent();
+  if (error) return <Message>Load news from server</Message>;
   return (
     <section className={styles.section}>
       <div>
