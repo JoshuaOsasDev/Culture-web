@@ -6,8 +6,8 @@ import HomeNav from "../Nav/HomeNav";
 function Hero() {
   return (
     <>
+      <HomeNav />
       <div className={styles.hero}>
-        <HomeNav />
         <div className={styles.heroMain}>
           <Carousel />
         </div>

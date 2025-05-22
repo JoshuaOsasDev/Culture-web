@@ -1,8 +1,22 @@
+import { useEffect, useState } from "react";
 import styles from "./HomeNav.module.css";
 import { NavLink } from "react-router";
 function HomeNav() {
+  const [sticky, setSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setSticky(window.scrollY > 200);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  console.log(sticky);
+
   return (
-    <nav className={styles.nav}>
+    <nav className={`${styles.nav} ${sticky ? styles.sticky : ""}`}>
       <NavLink to="/">
         <img src="logoimg.png" alt="" />
       </NavLink>

@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 const ContentContext = createContext();
 
@@ -9,6 +10,8 @@ const ContentProvider = function ({ children }) {
   const [questions, setQuestions] = useState([]);
   const [curOpen, setCurOpen] = useState(null);
   const [error, setError] = useState("");
+
+  const { inView, ref } = useInView({ threshold: 0 });
 
   useEffect(() => {
     const fecthData = async function () {
@@ -42,7 +45,7 @@ const ContentProvider = function ({ children }) {
   }, []);
   return (
     <ContentContext.Provider
-      value={{ questions, curOpen, error, setCurOpen, news }}
+      value={{ questions, curOpen, error, setCurOpen, news, inView, ref }}
     >
       {children}
     </ContentContext.Provider>

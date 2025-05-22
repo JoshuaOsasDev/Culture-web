@@ -4,6 +4,8 @@
 
   align-items: center;
   background-color: #143253;
+  position: sticky;
+  top: 0;
 }
 
 .nav img {
