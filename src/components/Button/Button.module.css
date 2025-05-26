@@ -15,7 +15,7 @@
 .btnDiscover {
   padding: 0.5em;
   background-color: #fff;
-  margin: 10px 15px 2rem;
+  margin: 10px 10px 2rem;
 
   text-transform: capitalize;
   font-size: 1.1em;
@@ -25,7 +25,7 @@
   font-family: "lora", serif;
   transition: background-color 0.3s, color 0.3s;
   position: absolute;
-  bottom: -20px !important;
+  bottom: 1px !important;
 }
 
 .btnDiscover:hover {
@@ -52,4 +52,17 @@
 
 .btnPosition {
   position: absolute;
+}
+
+.btnExoand {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin-left: 5px;
+  color: #2980b9;
+  font-size: 16px;
+}
+
+.btnExoand:hover {
+  border-bottom: 1px solid #2980b9;
 }

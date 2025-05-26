@@ -4,7 +4,7 @@ import { faqs, news as dummyNews } from "../data/dataDummy";
 
 const ContentContext = createContext();
 
-const URL = "http://localhost:9000/";
+// const URL = "http://localhost:9000/";
 
 const ContentProvider = function ({ children }) {
   const [news, setNews] = useState([]);

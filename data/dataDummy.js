@@ -43,7 +43,7 @@ export const news = [
   },
   {
     headline: "Global Stock Markets Show Positive Growth",
-    body: "Stock markets around the world experience a surge as companies report strong earnings for the first quarter of 2025.",
+    body: "Stock markets around the world experience a surge as companies report strong earnings for the first quarter of 2025.unveils a new set of reforms aimed at improving the quality of education across the country.unveils a new set of reforms aimed at improving the quality of education across the country.",
     date: "2025-04-15",
   },
   {
