@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import { faqs, news as dummyNews } from "../data/dataDummy";
 
 const ContentContext = createContext();
 
@@ -14,35 +15,22 @@ const ContentProvider = function ({ children }) {
   const { inView, ref } = useInView({ threshold: 0 });
 
   useEffect(() => {
-    const fecthData = async function () {
+    const fetchDummyData = () => {
       try {
-        const res = await fetch(URL + "faqs");
-        if (!res.ok) throw new Error("Failed to fecth");
-        const data = await res.json();
-
-        setQuestions(data);
-      } catch (error) {
-        setError(error.message);
-      }
-    };
-    fecthData();
-  }, []);
-
-  useEffect(() => {
-    const fecthNewsData = async function () {
-      try {
-        const res = await fetch(URL + "news");
-        if (!res.ok) throw new Error("Failed to fecth");
-        const data = await res.json();
-        console.log(data, "news");
-        setNews(data);
-      } catch (error) {
-        setError(error.message);
+        // Simulate async fetch
+        setTimeout(() => {
+          setQuestions(faqs);
+          setNews(dummyNews);
+        }, 500); // simulate 500ms delay
+      } catch (err) {
+        setError("Failed to load data");
+        console.log(err.message);
       }
     };
 
-    fecthNewsData();
-  }, []);
+    fetchDummyData();
+  }, [news]);
+
   return (
     <ContentContext.Provider
       value={{ questions, curOpen, error, setCurOpen, news, inView, ref }}
