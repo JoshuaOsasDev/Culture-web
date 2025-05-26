@@ -6,5 +6,6 @@ export default defineConfig({
   server: {
     host: "0.0.0.0",
     port: 5173,
+    allowedHosts: ["culture-web-qpx8.onrender.com"],
   },
 });
