@@ -10,12 +10,23 @@
   color: #ffff;
   font-size: 1.7em;
   font-weight: 600;
+  transition: all 500ms;
+}
+
+.btnHero:hover {
+  backdrop-filter: blur(16px);
+  /* border: 1px solid #011731; */
+  border: none;
+  color: #011731;
+  background-color: #ffff;
+  margin-left: 5px;
 }
 
 .btnDiscover {
   padding: 0.5em;
   background-color: #fff;
-  margin: 10px 10px 2rem;
+  margin: 15px 10px 2rem;
+  padding: 13px 20px;
 
   text-transform: capitalize;
   font-size: 1.1em;
@@ -34,7 +45,7 @@
 }
 
 .btnHistory {
-  margin-top: 4rem;
+  margin-top: 2rem;
   border: 3px solid #333333;
   color: #333333;
   font-size: 1rem;

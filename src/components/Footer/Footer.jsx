@@ -13,7 +13,7 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div>
-        <img src="image.png" alt="" />
+        <img src="logoimg.png" alt="" />
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
       <div>

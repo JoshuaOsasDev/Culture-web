@@ -9,7 +9,7 @@
   padding-right: 1.5rem;
 
   background-image: linear-gradient(
-      rgba(36, 42, 46, 0.8),
+      rgba(36, 42, 46, 0.7),
       rgba(36, 42, 46, 0.8)
     ),
     url("/palace2.jpg");
@@ -32,7 +32,8 @@
   /* background: rgba(0, 0, 0, 0.2); */
   /* border-left: 4px solid #087f5b; */
   border-radius: 10px;
-  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin-top: 5rem;
 }
 
 .hero h2 {
@@ -44,6 +45,7 @@
   text-shadow: 2px 2px 5px #000;
   margin-bottom: 1.5rem;
   text-transform: capitalize;
+  padding-top: 3rem;
 }
 
 .hero h4 {

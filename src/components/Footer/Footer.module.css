@@ -3,9 +3,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+
   /* margin-top: 20px; */
-  min-height: calc(50vh - 5rem);
+  /* min-height: calc(50vh - 5rem); */
 }
 
 .footer h3 {
@@ -17,8 +17,8 @@
 
 .footer img {
   width: 50%;
-  background-color: #000;
-  margin-bottom: 10px;
+
+  margin: 20px 0;
 }
 
 .footer p {
@@ -29,19 +29,31 @@
   list-style: none;
   padding: 5px 0;
   color: #fff;
-  font-size: 1.5rem;
+
   cursor: pointer;
   text-transform: capitalize;
+  font-weight: 500;
 
   display: flex;
   gap: 5px;
 }
 
-.footer ul li p {
-  font-size: 1.6rem;
+.footer ul li p svg {
+  font-size: 1.3rem;
+}
+
+.footer ul li:last-child {
+  margin-bottom: 20px;
 }
 
 footer ul li a {
   text-decoration: none;
   color: #fff;
+  font-size: 1.2rem;
+  padding-bottom: 0;
+  transition: ease-in 500ms;
+}
+
+footer ul li a:hover {
+  border-bottom: 1px solid #fff;
 }

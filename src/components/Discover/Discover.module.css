@@ -4,6 +4,7 @@
   max-width: 70%;
   padding: 4rem 0;
   font-family: "Playfair Display", serif;
+  margin-top: 1.5rem;
 }
 
 .sectionText {
@@ -29,5 +30,5 @@
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 192px;
+  top: 185px;
 }

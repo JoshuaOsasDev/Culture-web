@@ -14,7 +14,7 @@ function QuickLink() {
         </li>
         <li>
           {" "}
-          <NavLink to="/history">Histoty</NavLink>{" "}
+          <NavLink to="/history">History</NavLink>{" "}
         </li>
         <li>
           {" "}
@@ -26,7 +26,7 @@ function QuickLink() {
         </li>
         <li>
           {" "}
-          <NavLink to="/contact">Contanct</NavLink>{" "}
+          <NavLink to="/contact">Contact</NavLink>{" "}
         </li>
       </ul>
     </div>

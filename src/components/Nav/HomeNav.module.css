@@ -24,8 +24,6 @@ nav.sticky {
   color: #374151;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(16px);
-  transition: all 0.5s ease;
-  z-index: 50;
 }
 
 nav.sticky ul a {
@@ -35,6 +33,11 @@ nav.sticky ul a {
 nav.sticky ul a:link,
 nav.sticky ul a:visited {
   color: #011731;
+}
+
+nav.sticky img {
+  filter: brightness(0) saturate(100%) invert(9%) sepia(44%) saturate(1618%)
+    hue-rotate(182deg) brightness(93%) contrast(101%);
 }
 .nav img {
   width: 60px;
@@ -55,11 +58,6 @@ nav.sticky ul a:visited {
 }
 
 .nav ul a {
-  text-transform: capitalize;
-  text-decoration: none;
-  color: #cde3fd;
-
-  font-size: 1.2em;
   margin: 2rem 0;
 }
 
@@ -74,17 +72,19 @@ nav.sticky ul a:visited {
   padding: 0.5rem 2rem;
   color: #fff;
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
 }
 
 .nav ul a div {
-  background-color: #374151; /* Tailwind bg-gray-700 = #374151 */
-  height: 2px; /* h-0.5 = 0.125rem = 2px */
+  background-color: #374151;
+  height: 2px;
   border-bottom: 2px solid white;
   width: 0;
   height: 2px;
   transition: all 300ms;
+}
+
+.nav.sticky ul a div {
+  border-color: #011731;
 }
 
 .nav ul a:hover div {

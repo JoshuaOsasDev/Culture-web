@@ -33,6 +33,9 @@
   font-weight: 500;
 }
 
+.icon svg:hover {
+  color: #034da5;
+}
 .contentBox {
   grid-column: 2 / -1;
   padding-bottom: 16px;
