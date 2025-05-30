@@ -1,0 +1,72 @@
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  font-family: "Lora", serif;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 35px 20px;
+  /* padding-right: 4.8rem; */
+
+  border: 3px solid #011731;
+  border-radius: 12px;
+  font-size: 1.02rem;
+}
+
+.contactForm textarea {
+  width: 77%;
+  height: 50vh;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border: 3px solid #023a7c;
+  color: #333333;
+  outline: none;
+}
+
+.contactInput {
+  display: flex;
+  gap: 12px;
+}
+
+.contactForm button {
+  background-color: #011731;
+  color: #fff;
+  border: none;
+
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+
+  padding: 30px 0;
+  margin: 15px 0;
+
+  width: 77%;
+  transition: ease-in 500ms;
+}
+
+.contactForm button:hover {
+  background-color: #023a7c;
+}
+
+.required {
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  justify-content: center;
+  gap: 10px;
+}
+.contactForm span {
+  color: red;
+  font-size: 10px;
+}
+
+.textArea {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
