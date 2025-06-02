@@ -55,6 +55,8 @@ nav.sticky img {
   align-items: center;
   list-style: none;
   margin-left: 5rem;
+
+  transition: ease-in-out 0.4s;
 }
 
 .nav ul a {
@@ -91,6 +93,16 @@ nav.sticky img {
   width: 100%;
 }
 
+.menuToogle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 50px 10px;
+  color: #fff;
+}
+
 @media (min-width: 1024px) {
   .nav {
     padding-left: 6rem;
@@ -102,5 +114,49 @@ nav.sticky img {
   .nav {
     padding-left: 8rem;
     padding-right: 8rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .menuToogle {
+    display: block;
+  }
+
+  .navLinkUl {
+    display: none;
+  }
+
+  .nav .open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+
+    right: 1px;
+  }
+
+  .nav ul li {
+    flex-direction: column;
+    gap: 1px;
+    /* background-color: #011731; */
+    margin-top: 15px;
+    margin-right: 2px;
+    z-index: 999;
+    backdrop-filter: blur(70px);
+  }
+  .nav ul a {
+    margin: 0;
+  }
+
+  nav.sticky {
+    display: none;
   }
 }

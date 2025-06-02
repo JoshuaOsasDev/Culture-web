@@ -49,3 +49,28 @@
   margin: 5px 10px;
   text-align: left;
 }
+
+@media (max-width: 1200px) {
+  .contain {
+    height: 20vh;
+  }
+
+  .contain {
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2),
+      0 25px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .contain p {
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+
+  .contain h3 {
+    position: initial;
+  }
+
+  .contain p {
+    position: initial;
+  }
+}

@@ -19,7 +19,7 @@ export default function Carousel() {
         slidesPerView={1}
         loop={true}
         speed={2000}
-        // autoplay={{ delay: 4000, disableOnInteraction: false }}
+        autoplay={{ delay: 4000, disableOnInteraction: true }}
         pagination={{ clickable: true }}
         navigation
       >

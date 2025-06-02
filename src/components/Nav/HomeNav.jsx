@@ -1,9 +1,12 @@
 import { useEffect, useState, useRef } from "react";
 import styles from "./HomeNav.module.css";
 import { NavLink } from "react-router"; // Fixed import (should be react-router-dom)
+import { useContent } from "../../../context/UseContent";
+import { HiBars3 } from "react-icons/hi2";
 
+import Button from "../Button/Button";
 function HomeNav() {
-  const [sticky, setSticky] = useState(false);
+  const { sticky, setSticky, menuOpen, setMenuOpen } = useContent();
   const observerRef = useRef(null);
 
   useEffect(() => {
@@ -29,7 +32,7 @@ function HomeNav() {
         observer.unobserve(observerRef.current);
       }
     };
-  }, []);
+  }, [setSticky]);
 
   return (
     <>
@@ -44,21 +47,28 @@ function HomeNav() {
           <img src="logoimg.png" alt="" />
         </NavLink>
 
-        <ul>
+        <button
+          type="btnNav"
+          className={styles.menuToogle}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <HiBars3 />
+        </button>
+        <ul className={`${styles.navLinkUl} ${menuOpen ? styles.open : ""}`}>
           <li>
-            <NavLink to="/about">
+            <NavLink to="/about" onClick={() => setMenuOpen(false)}>
               About <div></div>
             </NavLink>
-            <NavLink to="/event">
+            <NavLink to="/event" onClick={() => setMenuOpen(false)}>
               Event <div></div>
             </NavLink>
-            <NavLink to="/history">
+            <NavLink to="/history" onClick={() => setMenuOpen(false)}>
               History <div></div>
             </NavLink>
-            <NavLink to="/news">
+            <NavLink to="/news" onClick={() => setMenuOpen(false)}>
               News <div></div>
             </NavLink>
-            <NavLink to="/contact">
+            <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
               Contact <div></div>
             </NavLink>
           </li>

@@ -63,3 +63,22 @@
 .open .title {
   color: #011731;
 }
+
+@media (max-width: 1200px) {
+  .accordion {
+    width: 400px;
+  }
+
+  .title,
+  .icon {
+    font-size: 18px;
+  }
+  .icon {
+    margin-right: 10px;
+  }
+
+  .contentBox {
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+}

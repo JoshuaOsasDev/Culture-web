@@ -65,27 +65,35 @@ linear-gradient(
 
 @media (max-width: 768px) {
   .hero {
-    width: 100%;
+    height: auto;
+    padding: 4rem 1rem 3rem;
+    background-position-y: center;
+    align-items: center;
+    text-align: center;
   }
+
+  .heroMain {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    box-shadow: none;
+  }
+
   .hero h2 {
-    /* padding-left: 4rem;
-    padding-right: 4rem; */
-    margin-top: 4rem;
-    padding-top: 4rem;
-    max-width: 90%;
+    font-size: 2rem;
+    line-height: 1.4;
+    padding-top: 0;
+    /* margin: 0 auto 1rem; */
+    /* max-width: 90%; */
+    /* text-align: center; */
+  }
+
+  .hero h4 {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* text-align: center; */
   }
 }
-
-/* @media (min-width: 1024px) {
-  .hero {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .hero {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-} */

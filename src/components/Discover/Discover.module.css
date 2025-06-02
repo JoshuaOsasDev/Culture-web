@@ -32,3 +32,28 @@
   position: absolute;
   top: 185px;
 }
+
+@media (max-width: 1200px) {
+  .discover {
+    max-width: 90%;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+  }
+
+  .whole {
+    grid-template-columns: repeat(auto-fit, minmax(0, 60rem));
+    gap: 3rem;
+  }
+  .sectionText h4 {
+    font-size: 1.1rem;
+    color: #222;
+    opacity: 0.9;
+    margin-bottom: 0.75rem;
+    margin-right: 0;
+  }
+
+  .sectionText h2 {
+    margin-bottom: 0;
+    font-size: 1.6rem;
+  }
+}

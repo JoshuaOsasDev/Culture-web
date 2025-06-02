@@ -11,7 +11,8 @@ const ContentProvider = function ({ children }) {
   const [questions, setQuestions] = useState([]);
   const [curOpen, setCurOpen] = useState(null);
   const [error, setError] = useState("");
-
+  const [sticky, setSticky] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const { inView, ref } = useInView({ threshold: 0 });
 
   useEffect(() => {
@@ -33,7 +34,19 @@ const ContentProvider = function ({ children }) {
 
   return (
     <ContentContext.Provider
-      value={{ questions, curOpen, error, setCurOpen, news, inView, ref }}
+      value={{
+        questions,
+        curOpen,
+        error,
+        setCurOpen,
+        news,
+        inView,
+        ref,
+        sticky,
+        setSticky,
+        menuOpen,
+        setMenuOpen,
+      }}
     >
       {children}
     </ContentContext.Provider>

@@ -77,3 +77,19 @@
 .btnExoand:hover {
   border-bottom: 1px solid #2980b9;
 }
+
+.btnNav {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1200px) {
+  .btnHero {
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-bottom: 1rem;
+  }
+
+  .btnDiscover {
+    position: initial;
+  }
+}
