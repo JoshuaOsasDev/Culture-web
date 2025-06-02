@@ -1,5 +1,5 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
+
 import { faqs, news as dummyNews } from "../data/dataDummy";
 
 const ContentContext = createContext();
@@ -13,16 +13,27 @@ const ContentProvider = function ({ children }) {
   const [error, setError] = useState("");
   const [sticky, setSticky] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const { inView, ref } = useInView({ threshold: 0 });
+  const [isClosing, setIsClosing] = useState(false);
 
+  const observerRef = useRef(null);
+  // const { inView, ref } = useInView({ threshold: 0 });
+
+  const handleCloseMenu = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setMenuOpen(false);
+      setIsClosing(false);
+    }, 300); // Match this with your CSS transition duration
+  };
+
+  // DUMMY DATA
   useEffect(() => {
     const fetchDummyData = () => {
       try {
-        // Simulate async fetch
         setTimeout(() => {
           setQuestions(faqs);
           setNews(dummyNews);
-        }, 500); // simulate 500ms delay
+        }, 500);
       } catch (err) {
         setError("Failed to load data");
         console.log(err.message);
@@ -32,6 +43,43 @@ const ContentProvider = function ({ children }) {
     fetchDummyData();
   }, [news]);
 
+  // NAV REF
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setSticky(!entry.isIntersecting);
+      },
+      {
+        root: null,
+        threshold: 0,
+        rootMargin: "-200px 0px 0px 0px",
+      }
+    );
+
+    if (observerRef.current) {
+      observer.observe(observerRef.current);
+    }
+
+    return () => {
+      if (observerRef.current) {
+        observer.unobserve(observerRef.current);
+      }
+    };
+  }, [setSticky]);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth >= 1200) setMenuOpen(false);
+    }
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.addEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <ContentContext.Provider
       value={{
@@ -40,12 +88,13 @@ const ContentProvider = function ({ children }) {
         error,
         setCurOpen,
         news,
-        inView,
-        ref,
         sticky,
         setSticky,
         menuOpen,
         setMenuOpen,
+        observerRef,
+        handleCloseMenu,
+        isClosing,
       }}
     >
       {children}
@@ -55,7 +104,7 @@ const ContentProvider = function ({ children }) {
 
 const useContent = function () {
   const content = useContext(ContentContext);
-  console.log(content);
+  // console.log(content);
   return content;
 };
 

@@ -93,3 +93,21 @@
     position: initial;
   }
 }
+
+.btnNavClose {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  color: #000;
+}
+
+.btnNavClose:hover {
+  transform: rotate(360deg);
+}

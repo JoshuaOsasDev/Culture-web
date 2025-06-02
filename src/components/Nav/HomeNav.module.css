@@ -44,6 +44,7 @@ nav.sticky img {
 }
 .nav ul {
   list-style: none;
+  transition: ease-in-out;
 }
 .nav ul li {
   /* display: flex;
@@ -103,6 +104,15 @@ nav.sticky img {
   color: #fff;
 }
 
+.menuToogleSticky {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  margin: 50px 10px;
+  color: #000;
+}
+
 @media (min-width: 1024px) {
   .nav {
     padding-left: 6rem;
@@ -119,44 +129,75 @@ nav.sticky img {
 
 @media (max-width: 1200px) {
   .nav {
+    position: fixed;
     justify-content: space-between;
     align-items: center;
     margin: 0;
     padding: 0;
   }
+
+  .nav a:link,
+  .nav a:visited {
+    color: #000;
+  }
+
+  .nav ul a:hover div {
+    border-color: #000;
+  }
   .menuToogle {
     display: block;
   }
 
+  .menuToogleSticky {
+    display: block;
+  }
   .navLinkUl {
     display: none;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
   }
 
-  .nav .open {
+  .open {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 50%;
+    position: fixed;
 
-    right: 1px;
+    background-color: #ffff;
+    /* color: red; */
+    /* backdrop-filter: blur(70px); */
+
+    top: 1px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav .closing {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
   }
 
   .nav ul li {
     flex-direction: column;
     gap: 1px;
     /* background-color: #011731; */
-    margin-top: 15px;
-    margin-right: 2px;
-    z-index: 999;
-    backdrop-filter: blur(70px);
+
+    margin: 0;
   }
   .nav ul a {
     margin: 0;
   }
 
   nav.sticky {
-    display: none;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    height: 10vh;
+    opacity: 1;
   }
 }
