@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 const FadeInSection = ({ children }) => {
   const { ref, inView } = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.1,
   });
 
-  //   console.log(motion, "moton");
+  // console.log(inView, "moton");
 
   return (
     <motion.div
