@@ -12,7 +12,7 @@ import {
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <div>
+      <div className={styles.footerImg}>
         <img src="logoimg.png" alt="" />
         <p>Lorem ipsum dolor sit amet.</p>
       </div>

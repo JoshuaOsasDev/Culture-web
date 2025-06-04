@@ -16,7 +16,7 @@ function Accord() {
           onCurOpen={setCurOpen}
           index={i}
           question={question}
-          key={question.id}
+          key={question.title}
         />
       ))}
     </div>

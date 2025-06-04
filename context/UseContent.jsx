@@ -45,16 +45,17 @@ const ContentProvider = function ({ children }) {
 
   // NAV REF
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setSticky(!entry.isIntersecting);
-      },
-      {
-        root: null,
-        threshold: 0,
-        rootMargin: "-200px 0px 0px 0px",
-      }
-    );
+    const obsOptions = {
+      root: null,
+      threshold: 0,
+      rootMargin: "-200px 0px 0px 0px",
+    };
+
+    const obsCallBack = ([entry]) => {
+      console.log(entry, "entry");
+      setSticky(!entry.isIntersecting);
+    };
+    const observer = new IntersectionObserver(obsCallBack, obsOptions);
 
     if (observerRef.current) {
       observer.observe(observerRef.current);

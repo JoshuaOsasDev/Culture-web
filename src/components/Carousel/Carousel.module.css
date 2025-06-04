@@ -47,9 +47,13 @@
     font-size: 2rem !important;
   }
 
+  :global(.swiper-pagination) {
+    /* margin-bottom: -3px; */
+  }
+
   :global(.swiper-pagination-bullets) {
-    bottom: -1px !important;
-    margin-bottom: -4px !important;
+    bottom: -4px !important;
+    /* margin-bottom: -4px !important; */
     /* top: 30% !important; */
   }
 }

@@ -17,7 +17,7 @@ function HomeNews() {
         ) : (
           firstThreeNews.length === 3 &&
           firstThreeNews.map((news) => (
-            <ul>
+            <ul key={news.date}>
               <li>
                 <h3>{news.headline}</h3>
                 <p className={styles.date}>{news.date}</p>

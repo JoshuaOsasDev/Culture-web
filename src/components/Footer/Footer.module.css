@@ -15,7 +15,7 @@
   margin: 25px 0;
 }
 
-.footer img {
+.footer .footerImg img {
   width: 50%;
 
   margin: 20px 0;
@@ -56,4 +56,26 @@ footer ul li a {
 
 footer ul li a:hover {
   border-bottom: 1px solid #fff;
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    align-items: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    gap: 1.5rem;
+  }
+  .footer .footerImg img {
+    margin-bottom: 10px;
+  }
+
+  .footer .footerImg p {
+    max-width: 80%;
+  }
+  .footer h3 {
+    font-size: 1rem;
+  }
+  .footer ul li {
+    font-size: 0.7rem;
+  }
 }
