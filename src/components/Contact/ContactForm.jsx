@@ -1,6 +1,12 @@
 import { useForm } from "react-hook-form";
 import styles from "./ContactForm.module.css";
+import { useEffect } from "react";
 function ContactForm() {
+  useEffect(() => {
+    document.title = "Contact";
+
+    return () => (document.title = "culture app");
+  }, []);
   const {
     register,
     formState: { errors },

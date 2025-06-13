@@ -47,13 +47,13 @@ function HomeNav() {
                 <HiMiniXMark />
               </Button>
             )}
-            <NavLink to="/about" onClick={handleCloseMenu}>
+            <NavLink to="#" onClick={handleCloseMenu}>
               About <div></div>
             </NavLink>
-            <NavLink to="/event" onClick={handleCloseMenu}>
+            <NavLink to="#" onClick={handleCloseMenu}>
               Event <div></div>
             </NavLink>
-            <NavLink to="/history" onClick={handleCloseMenu}>
+            <NavLink to="#" onClick={handleCloseMenu}>
               History <div></div>
             </NavLink>
             <NavLink to="/news" onClick={handleCloseMenu}>
